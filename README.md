@@ -166,7 +166,9 @@ Complete the following steps on both devices.
     ```
     - Provide the current computer's IP address when prompted for the Host name
     - If the device is the **lower device** then provide the ip address of the parent device
-  - Run the following Linux commands to create required directories and set permissions
+  - Run the following Linux commands to create required directories and set permissions.  
+    > **Warning**
+    > The permissions below should be tightened up before releasing to production.
     ```
     sudo mkdir /var/run/iotedge
     sudo chmod 777 /var/run/iotedge
