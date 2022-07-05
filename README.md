@@ -14,7 +14,7 @@ These instructions will configure the devices to connect via symmetric keys to t
 
 ## Steps
 
-### Step 1 - Create installation scripts
+### Step 1 - Create the device installation scripts
 
 * Log into [Azure Bash Shell](https://docs.microsoft.com/en-us/azure/cloud-shell/quickstart).
 * Extract the nested edge configuration tool to a directory.
