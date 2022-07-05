@@ -187,10 +187,15 @@ Complete the following steps on both devices.
   sudo iotedge check
   
   # Confirm all modules are running.  You should see:
+  # Top device:
   #   - edgeAgent
   #   - edgeHub
   #   - registry
   #   - IoTEdgeAPIProxy
+  # Lower device:
+  #   - edgeAgent
+  #   - edgeHub
+  #   - simulatedTemperatureSensor
   docker ps
   
   # Check the logs for all of the modules.  (This can also be done in the portal)
