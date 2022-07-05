@@ -173,7 +173,7 @@ Complete the following steps on both devices.
     sudo mkdir /var/run/iotedge
     sudo chmod 777 /var/run/iotedge
     sudo chown iotedge /var/run/iotedge
-    sudo chmod 777 /etc/aziot/certificates -R![image](https://user-images.githubusercontent.com/833055/177369825-6cb43cf0-46f8-48c7-b154-c38af329e73f.png)
+    sudo chmod 777 /etc/aziot/certificates -R
     ```
   - Apply the configuration changes
     ```
