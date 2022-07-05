@@ -192,11 +192,16 @@ Complete the following steps on both devices.
   docker ps
   
   # Check the logs for all of the modules.  (This can also be done in the portal)
+  # Top device:
   docker logs edgeAgent
   docker logs edgeHub
   docker logs restistry
   docker logs IoTEdgeAPIProxy
+  # Lower device:
+  docker logs edgeAgent
+  docker logs edgeHub
+  docker logs simulatedTemperatureSensor
   ```
-* Install the Azure IoT Explorer
+* Install the [Azure IoT Explorer](https://docs.microsoft.com/en-us/azure/iot-fundamentals/howto-use-iot-explorer) or the [Azure IoT CLI](https://github.com/Azure/azure-iot-cli-extension) and verify that messages are coming in from the simulation module.  If you are installing on a private network, try running the Azure CLI in the Azure Bash Shell.
 
 ## That's it - all done!
