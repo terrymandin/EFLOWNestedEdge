@@ -36,7 +36,7 @@ These instructions will configure the devices to connect via symmetric keys to t
   cd ~/nestedIotEdgeTutorial/iotedge_config_cli_release
   ./iotedge_config --config ~/nestedIotEdgeTutorial/iotedge_config_cli_release/templates/tutorial/iotedge_config.yaml --output ~/nestedIotEdgeTutorial/iotedge_config_cli_release/outputs -f
   ```
-* Explort the following files to your local C: drive
+* Export the following files to your local C: drive
   ```
   ~/nestedIotEdgeTutorial/iotedge_config_cli_release/outputs/lower-layer.zip
   ~/nestedIotEdgeTutorial/iotedge_config_cli_release/outputs/top-layer.zip
@@ -71,7 +71,7 @@ These instructions will configure the devices to connect via symmetric keys to t
 
 ### Step 2 - Setup networking
 
-* Create an External Switch on the **top computer**
+* Create an External Switch on the **top device**
   - Open Hyper-V Manager  
   - Under "Actions" select "Virtual Switch Manager..."
   - Choose "External"
@@ -84,17 +84,17 @@ These instructions will configure the devices to connect via symmetric keys to t
   - Click "Apply"
   - Click "OK"
 * Open Ports
-  - On the **top computer** open the following ports
+  - On the **top device** open the following ports
     ```
     sudo iptables -A INPUT -p tcp --dport 5671 -j ACCEPT
     sudo iptables -A INPUT -p tcp --dport 8883 -j ACCEPT
     sudo iptables -A INPUT -p tcp --dport 443 -j ACCEPT
     ```
-  - To allow pings on the **top computer** allow ICMP messages
+  - To allow pings on the **top device** allow ICMP messages
     ```
     sudo iptables -A INPUT -p icmp --icmp-type 8 -s 0/0 -m state --state NEW,ESTABLISHED,RELATED -j ACCEPT
     ```
-  - To make the simulation module work on the **lower computer** open the AMQP port
+  - To make the simulation module work on the **lower device** open the AMQP port
     ```
     sudo iptables -A INPUT -p tcp --dport 5671 -j ACCEPT
     ```
@@ -169,7 +169,7 @@ Complete the following steps on both devices.
     ```
     sudo ./install.sh
     ```
-    - Provide the current computer's IP address when prompted for the Host name
+    - Provide the current device's IP address when prompted for the Host name
     - If the device is the **lower device** then provide the ip address of the parent device
   - Run the following Linux commands to create required directories and set permissions.  
     > **Warning**
@@ -186,7 +186,7 @@ Complete the following steps on both devices.
     ```
 ## Step 4 - Confirm everything is working properly
 
-* On the **top computer** perform the following checks
+* On the **top device** perform the following checks
   ```
   # Perform an IoT Edge check
   sudo iotedge check
