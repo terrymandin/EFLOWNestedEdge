@@ -197,5 +197,6 @@ Complete the following steps on both devices.
   docker logs restistry
   docker logs IoTEdgeAPIProxy
   ```
+* Install the Azure IoT Explorer
 
 ## That's it - all done!
