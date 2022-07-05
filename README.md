@@ -98,6 +98,7 @@ These instructions will configure the devices to connect via symmetric keys to t
     ```
     sudo iptables -A INPUT -p tcp --dport 5671 -j ACCEPT
     ```
+* If you are using a Hyper-V VM as the lower device and your PC as the top device, be sure to set the Hyper-V VM network switch to use the external switch you created above
 * Test connectivity from the lower device to the top device using a ping
   ```
   ping x.x.x.x
