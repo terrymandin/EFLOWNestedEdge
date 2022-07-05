@@ -72,7 +72,7 @@ These instructions will configure the devices to connect via symmetric keys to t
 ### Step 2 - Setup networking
 
 * Create an External Switch on the **top computer**
-  - Open Hyper-V.  
+  - Open Hyper-V Manager  
   - Under "Actions" select "Virtual Switch Manager..."
   - Choose "External"
   - Click on "Create Virtual Switch"
@@ -98,7 +98,11 @@ These instructions will configure the devices to connect via symmetric keys to t
     ```
     sudo iptables -A INPUT -p tcp --dport 5671 -j ACCEPT
     ```
-* If you are using a Hyper-V VM as the lower device and your PC as the top device, be sure to set the Hyper-V VM network switch to use the external switch you created above
+* If you are using a Hyper-V VM as the lower device and your PC as the top device, be sure to set the Hyper-V VM network to use the external switch you created above
+  - Open Hyper-V Manager
+  - Right click on your VM, choose "Settings..."
+  - Click on "Network Adapter"
+  - Select the external switch you created above
 * Test connectivity from the lower device to the top device using a ping
   ```
   ping x.x.x.x
