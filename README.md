@@ -103,6 +103,7 @@ These instructions will configure the devices to connect via symmetric keys to t
   - Right click on your VM, choose "Settings..."
   - Click on "Network Adapter"
   - Select the external switch you created above
+  - Click on "Apply", then "OK"
 * Test connectivity from the lower device to the top device using a ping
   ```
   ping x.x.x.x
