@@ -130,7 +130,7 @@ Complete the following steps on both devices.
     $ProgressPreference = 'SilentlyContinue'
     Invoke-WebRequest "https://aka.ms/AzEFLOWMSI-CR-X64" -OutFile $msiPath
 
-    Start-Process -Wait msiexec -ArgumentList "/i","$([io.Path]::Combine($env:TEMP, 'AzureIoTEdge.msi'))","/qn"![image](https://user-images.githubusercontent.com/833055/177223634-d80bf9b9-4155-459b-aa0e-0595a19b732d.png)
+    Start-Process -Wait msiexec -ArgumentList "/i","$([io.Path]::Combine($env:TEMP, 'AzureIoTEdge.msi'))","/qn"
     ```
   - On the **top device**, specify the switch that was created in Step 2.  Please insert the name of your external switch in the snippet below
     ```
