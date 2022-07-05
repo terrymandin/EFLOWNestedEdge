@@ -192,24 +192,30 @@ Complete the following steps on both devices.
   sudo iotedge check
   
   # Confirm all modules are running.  You should see:
-  # Top device:
   #   - edgeAgent
   #   - edgeHub
   #   - registry
   #   - IoTEdgeAPIProxy
-  # Lower device:
+  docker ps
+  
+  # Check the logs for all of the modules.  (This can also be done in the portal)
+  docker logs edgeAgent
+  docker logs edgeHub
+  docker logs restistry
+  docker logs IoTEdgeAPIProxy
+  ```
+* On the **lower device** perform the following checks
+  ```
+  # Perform an IoT Edge check
+  sudo iotedge check
+  
+  # Confirm all modules are running.  You should see:
   #   - edgeAgent
   #   - edgeHub
   #   - simulatedTemperatureSensor
   docker ps
   
   # Check the logs for all of the modules.  (This can also be done in the portal)
-  # Top device:
-  docker logs edgeAgent
-  docker logs edgeHub
-  docker logs restistry
-  docker logs IoTEdgeAPIProxy
-  # Lower device:
   docker logs edgeAgent
   docker logs edgeHub
   docker logs simulatedTemperatureSensor
